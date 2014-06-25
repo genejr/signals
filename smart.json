@@ -1,0 +1,8 @@
+{
+  "name": "dm-countries",
+  "description": "A collection that contains all the countries in the world.",
+  "homepage": "https://github.com/digilord/dm-countries",
+  "author": "Daniel Morrigan - DigiLord",
+  "version": "0.0.1",
+  "packages":{}
+}
