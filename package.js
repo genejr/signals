@@ -1,7 +1,7 @@
 Package.describe({
   summary: "A collection that contains all the countries in the world.",
-  version: "0.1",
-  name: "digilord:countries"
+  version: "0.1.0",
+  name: "digilord:countries",
   homepage: "https://github.com/digilord/dm-countries",
   git: "https://github.com/digilord/dm-countries.git"
 });
