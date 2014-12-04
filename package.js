@@ -11,6 +11,9 @@ Npm.depends({
 })
 
 Package.on_use(function (api) {
+  api.versionsFrom("METEOR@0.9.0");
+  api.use('meteorhacks:npm@1.1.3')
+
   api.use(['coffeescript'], ['client','server']);
   api.add_files(['client/countries.coffee'], ['client'])
   api.add_files(['collections/countries.coffee'], ['client','server'])
