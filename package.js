@@ -18,6 +18,7 @@ Package.on_use(function (api) {
   api.addFiles('private/country.csv', 'server', {isAsset: true})
   api.addFiles(['client/countries.coffee'], ['client'])
   api.addFiles(['collections/countries.coffee'], ['client','server'])
+  api.addFiles(['csv.js'], ['server'])
   api.addFiles(['server/countries.coffee'], ['server'])
 
 });
