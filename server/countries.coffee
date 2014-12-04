@@ -3,9 +3,8 @@ console.log "Adding countries"
 Meteor.startup () ->
   console.log "Adding countries"
   # Countries collection initialization.
-  countries_csv = Assets.getText 'private/country.csv', (err) ->
-    console.log err
-  csv = Meteor.npmRequire('csv')
+  countries_csv = Assets.getText('country.csv')
+  csv = Npm.require('csv')
   countries_count = Countries.find().count()
   if countries_count is 0
     Future  = Npm.require('fibers/future')
