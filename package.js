@@ -15,9 +15,9 @@ Package.on_use(function (api) {
   api.use('meteorhacks:npm@1.1.3')
 
   api.use(['coffeescript'], ['client','server']);
-  api.add_files('private/country.csv', 'server', {isAsset: true})
-  api.add_files(['client/countries.coffee'], ['client'])
-  api.add_files(['collections/countries.coffee'], ['client','server'])
-  api.add_files(['server/countries.coffee'], ['server'])
+  api.addFiles('private/country.csv', 'server', {isAsset: true})
+  api.addFiles(['client/countries.coffee'], ['client'])
+  api.addFiles(['collections/countries.coffee'], ['client','server'])
+  api.addFiles(['server/countries.coffee'], ['server'])
 
 });
