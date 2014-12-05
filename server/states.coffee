@@ -14,8 +14,8 @@ Meteor.startup () ->
 
     results = future.wait()
     for state in results
-      iso = state[0]
-      name = state[1]
+      iso = state[1]
+      name = state[0]
       selected = false
 
       States.insert {iso: iso, name: name, selected: selected}

@@ -1,1 +1,1 @@
-Meteor.subscribe 'countries'
+Meteor.subscribe 'states'

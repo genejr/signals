@@ -1,1 +1,1 @@
-@Countries = new Meteor.Collection("countries")
+@States = new Meteor.Collection("states")
