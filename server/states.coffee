@@ -1,31 +1,24 @@
-console.log "Adding countries"
+console.log "Adding states"
 
 Meteor.startup () ->
-  console.log "Adding countries"
-  # Countries collection initialization.
-  countries_csv = Assets.getText('private/country.csv')
+  console.log "Adding states"
+  # States collection initialization.
+  states_csv = Assets.getText('private/states.csv')
   parse = Npm.require('csv').parse
-  countries_count = Countries.find().count()
-  if countries_count is 0
+  states_count = States.find().count()
+  if states_count is 0
     Future  = Npm.require('fibers/future')
     future = new Future()
-    parse countries_csv, {comment: '#'}, (err, data)->
+    parse states_csv, {comment: '#'}, (err, data)->
         future.return(data)
 
     results = future.wait()
-    for country in results
-      iso = country[0]
-      name = country[1]
+    for state in results
+      iso = state[0]
+      name = state[1]
       selected = false
 
-      # Setup the default country.  Do this so there is no
-      # flashing in the interface when the country list is
-      # populated then changed when there is no user selected
-      # country.
-      if name is 'United States'
-        selected = true
+      States.insert {iso: iso, name: name, selected: selected}
 
-      Countries.insert {iso: iso, name: name, selected: selected}
-
-Meteor.publish 'countries', () ->
-  return Countries.find({})
+Meteor.publish 'states', () ->
+  return States.find({})

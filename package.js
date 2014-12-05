@@ -1,6 +1,6 @@
 Package.describe({
   summary: "A collection that contains all the US states.",
-  version: "1.0.2",
+  version: "1.0.3",
   name: "digilord:us-states",
   homepage: "https://github.com/digilord/dm-us-states",
   git: "https://github.com/digilord/dm-us-states.git"
